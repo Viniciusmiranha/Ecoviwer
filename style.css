@@ -793,6 +793,28 @@ html {
   display: none;
 }
 
+/* ===== MODO ALTO CONTRASTE ACESSIVEL ===== */
+body.contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste * {
+  background: transparent !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+/* LINKS */
+body.contraste a {
+  color: #00ffff !important;
+}
+
+/* BOTÕES */
+body.contraste button {
+  background: #fff !important;
+  color: #000 !important;
+}
 
 
 /* ===== RESPONSIVO CELULAR (CORRIGIDO) ===== */
@@ -859,6 +881,7 @@ html {
     margin-left: 0;
     padding-left: 20px;
     font-size: 22px;
+    border-radius: 12px;
   }
 
   .subtitle {
