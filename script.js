@@ -114,3 +114,14 @@ function abrirFeedback() {
 function fecharFeedback() {
   document.getElementById("feedbackModal").classList.remove("active");
 }
+
+// menu hamburguer
+function toggleMenu() {
+  const nav = document.querySelector(".nav");
+  const toggle = document.querySelector(".menu-toggle");
+  const overlay = document.querySelector(".menu-overlay");
+
+  nav.classList.toggle("active");
+  toggle.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
