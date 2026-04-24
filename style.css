@@ -788,23 +788,22 @@ html {
   outline: none;
 }
 
+/* ESCONDE hamburguer NO DESKTOP */
+.menu-toggle {
+  display: none;
+}
 
 
 
-/* ================= MOBILE PREMIUM ================= */
+/* ===== RESPONSIVO CELULAR (CORRIGIDO) ===== */
 @media (max-width: 768px) {
 
-  /* RESET VISUAL MOBILE */
-  body {
-    background: linear-gradient(to bottom, #ffffff, #f6fff8);
-  }
-
+  /* HEADER */
   header {
     padding: 15px 20px;
-    backdrop-filter: blur(10px);
   }
 
-  /* MENU HAMBURGER */
+  /* BOTÃO HAMBURGER */
   .menu-toggle {
     display: block;
     font-size: 26px;
@@ -812,6 +811,7 @@ html {
     z-index: 10001;
   }
 
+  /* MENU */
   .nav {
     position: fixed;
     top: 0;
@@ -820,14 +820,18 @@ html {
     height: 100vh;
 
     background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     gap: 30px;
+
     transition: 0.4s;
+
+    z-index: 9999;
   }
 
   .nav.active {
@@ -843,10 +847,8 @@ html {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
-    padding: 120px 20px 60px;
+    padding: 100px 20px 40px;
     height: auto;
-    gap: 30px;
   }
 
   .left {
@@ -854,121 +856,65 @@ html {
   }
 
   .title {
-    font-size: 24px;
     margin-left: 0;
-    padding: 15px;
-    border-radius: 12px;
+    padding-left: 20px;
+    font-size: 22px;
   }
 
   .subtitle {
     max-width: 100%;
-    font-size: 0.95rem;
-    opacity: 0.9;
+    font-size: 1rem;
   }
 
   .btn {
     margin-top: 20px;
-    padding: 12px 30px;
   }
 
-  /* RELOGIO ESTILO CARD */
+  /* RELÓGIO */
   .right {
-    margin-top: 30px;
-
-    background: rgba(255,255,255,0.65);
-    backdrop-filter: blur(12px);
-
-    padding: 20px;
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
+    margin-top: 40px;
     text-align: center;
   }
 
   .time {
-    font-size: 38px;
+    font-size: 42px;
   }
 
   .season {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .date {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* SOBRE */
   .sobre {
     padding: 80px 20px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
   }
 
   .sobre-container {
     margin: 60px 10px;
-    padding: 25px;
-    border-radius: 15px;
-  }
-
-  .sobre-title {
-    font-size: 1.8rem;
+    padding: 20px;
   }
 
   .sobre-text {
     font-size: 0.95rem;
   }
 
-  /* EQUIPE */
+  /* GRID */
   .equipe {
     grid-template-columns: 1fr;
-    gap: 25px;
   }
 
-  .membro {
-    padding: 25px;
-    border-radius: 25px;
-
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(12px);
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-
-  .membro img {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* BOTÕES FLUTUANTES */
-  .acessibilidade-btn,
+  /* BOTÕES */
   .feedback-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
-
-  .feedback-btn {
-    bottom: 85px;
+    right: 15px;
+    bottom: 90px;
   }
 
   .acessibilidade-btn {
+    right: 15px;
     bottom: 20px;
-  }
-
-  /* MODAIS */
-  .login-box,
-  .feedback-box {
-    width: 90%;
-    padding: 30px;
-  }
-
-  /* TAP EFFECT (efeito app) */
-  * {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  button:active {
-    transform: scale(0.95);
   }
 }
