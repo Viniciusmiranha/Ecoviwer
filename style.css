@@ -881,5 +881,9 @@ html {
     right: 15px;
     bottom: 20px;
   }
-
+   .div{
+     width: 150px;
+     height: auto;
+    
+  }
 }
