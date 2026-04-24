@@ -5,24 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ecoviwer</title>
 
+  <!-- LINK DO CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- LINK DO FEEDBACK -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
+<div class="site">
 
+  <!-- HEADER -->
   <header>
     <div class="logo">
-  <img src="img/logo.png" alt="Ecoviwer">
-</div>
+    <img src="img/logo.png" alt="Ecoviwer">
+    </div>
     <nav class="nav">
       <a href="#sobre">Sobre</a>
       <a href="#">Contate-nos</a>
-      <button class="login-btn">Login</button>
+          <button class="login-btn" onclick="abrirLogin()">
+          Login
+          </button>
+     
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
 
+    <!-- LADO ESQUERDO -->
     <div class="left">
       <div class="title">
         Explore as plantas
@@ -30,12 +42,14 @@
      <p class="subtitle">
       Descubra informações detalhadas sobre milhares de espécies de plantas.
       </p>
-
+     <a href="saiba-mais.html">
       <button class="btn">
         Saiba mais
       </button>
+      </a>
     </div>
 
+    <!-- LADO DIREITO -->
     <div class="right">
       <div class="time" id="time">00:00</div>
       <div class="season" id="season">Outono</div>
@@ -51,14 +65,33 @@
   </section>
   <section id="sobre" class="sobre">
 
-  <div class="sobre-container">
+    <div class="sobre-container">
 
     <h2 class="sobre-title">Sobre nossa equipe</h2>
 
     <p class="sobre-text">
-      Somos apaixonados por natureza e tecnologia. Nosso objetivo é conectar
-      pessoas ao mundo das plantas, oferecendo informações acessíveis,
-      modernas e confiáveis sobre diversas espécies.
+      Este projeto foi desenvolvido como parte de uma iniciativa acadêmica no primeiro semestre do curso de 
+      Ciência da Computação da Universidade Paulista. Ele representa não apenas a aplicação prática dos conhecimentos
+      adquiridos em sala de aula, mas também o início da nossa jornada no desenvolvimento de
+      soluções tecnológicas com propósito real.
+
+      O Ecoviwer nasceu com o objetivo de unir tecnologia e natureza, proporcionando uma experiência moderna,
+      intuitiva e informativa sobre o universo das plantas. Durante a construção deste site, nossa equipe trabalhou
+      de forma colaborativa, dividindo responsabilidades de acordo com as áreas fundamentais do desenvolvimento.
+
+      Na parte de front-end, foram aplicados conceitos de HTML, CSS e JavaScript para criar uma interface visual agradável,
+      responsiva e interativa, focada na experiência do usuário. Já no back-end, foram estudadas e planejadas as estruturas
+      necessárias para autenticação de usuários, organização de dados e futura integração com banco de dados, garantindo
+      segurança e escalabilidade.
+
+      O design foi pensado com atenção aos detalhes, buscando equilíbrio entre estética e funcionalidade, utilizando cores
+      suaves e elementos modernos para transmitir identidade e profissionalismo ao projeto. Além disso, a equipe também se 
+      dedicou à documentação, registrando cada etapa do desenvolvimento, decisões técnicas e organização do código, o que é essencial
+ 
+      em qualquer projeto real.
+      Mesmo estando no início da graduação, este trabalho demonstra nosso comprometimento com o aprendizado, nossa capacidade de 
+      trabalho em equipe e nossa vontade de evoluir constantemente na área da tecnologia. Este projeto é apenas o primeiro de muitos
+      que ainda virão ao longo da nossa formação.
     </p>
 
     <div class="equipe">
@@ -67,7 +100,6 @@
       
         <h3>Vinícius | Gabriel</h3>
         <span>Front-end</span>
-        </span>
       </div>
 
       <div class="membro">
@@ -92,11 +124,119 @@
 
   </div>
 
-</section>
-  
+  </section>
+
   <footer class="footer">
   <p>© 2026 Ecoviwer. Todos os direitos reservados.</p>
-</footer>
+  </footer>
+
+</div>
+  
+<!-- FEEDBACK -->
+
+<div class="feedback-btn" onclick="abrirFeedback()">
+  <span class="material-icons">feedback</span>
+</div>
+
+<div id="feedbackModal" class="feedback-modal">
+
+  <div class="feedback-box">
+
+    <span class="close-btn" onclick="fecharFeedback()">&times;</span>
+
+    <h2 class="login-title">Seu feedback</h2>
+    <p class="login-subtitle">Sua opinião ajuda a melhorar o Ecoviwer</p>
+
+    <form>
+
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" placeholder="Seu nome (opcional)">
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Seu email (opcional)">
+      </div>
+
+      <div class="input-group">
+        <label>Mensagem</label>
+        <textarea placeholder="Escreva seu feedback..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn login-submit">
+        Enviar feedback
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- LOGIN -->
+
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+
+    <span class="close-btn" onclick="fecharLogin()">&times;</span>
+
+    <h2 class="login-title">Bem-vindo</h2>
+    <p class="login-subtitle">Acesse sua conta para continuar</p>
+
+    <form action="/login" method="POST">
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Digite seu email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Senha</label>
+        <input type="password" name="senha" placeholder="Digite sua senha" required>
+      </div>
+
+      <!-- ESQUECI SENHA -->
+      <div class="login-links">
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <button type="submit" class="btn login-submit">
+        Entrar
+      </button>
+
+    </form>
+
+    <!-- DIVISOR -->
+    <div class="divider">
+      <span>ou</span>
+    </div>
+
+    <!-- CRIAR CONTA -->
+    <button class="btn-outline">
+      Criar conta
+    </button>
+
+  </div>
+
+</div>
+
+<!-- BOTÃO ACESSIBILIDADE -->
+<div class="acessibilidade-btn" onclick="toggleAcessibilidade()">
+  ♿
+</div>
+
+<!-- PAINEL -->
+<div id="acessibilidadePanel" class="acessibilidade-panel">
+
+  <h3>Acessibilidade</h3>
+
+  <button onclick="aumentarFonte()">A+ Aumentar texto</button>
+  <button onclick="diminuirFonte()">A- Diminuir texto</button>
+  <button onclick="toggleContraste()">Alto contraste</button>
+
+</div> 
 
 <script src="script.js"></script>
 </body>
