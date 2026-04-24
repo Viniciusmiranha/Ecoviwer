@@ -85,25 +85,67 @@ function toggleAcessibilidade() {
   }
 }
 
-// AUMENTAR FONTE
-let escala = 1;
+// ===== ACESSIBILIDADE (VERSÃO PROFISSIONAL) =====
 
+let escala = localStorage.getItem("escala") 
+  ? parseFloat(localStorage.getItem("escala")) 
+  : 1;
+
+const MIN = 0.8;
+const MAX = 1.5;
+
+// aplica escala ao carregar
+document.documentElement.style.setProperty('--escala', escala);
+
+// ===== FONTE =====
 function aumentarFonte() {
-  escala += 0.1;
-  document.documentElement.style.setProperty('--escala', escala);
-}
-
-function diminuirFonte() {
-  if (escala > 0.7) {
-    escala -= 0.1;
-    document.documentElement.style.setProperty('--escala', escala);
+  if (escala < MAX) {
+    escala = Math.round((escala + 0.1) * 10) / 10;
+    aplicarEscala();
   }
 }
 
-// CONTRASTE
+function diminuirFonte() {
+  if (escala > MIN) {
+    escala = Math.round((escala - 0.1) * 10) / 10;
+    aplicarEscala();
+  }
+}
+
+function resetarFonte() {
+  escala = 1;
+  aplicarEscala();
+}
+
+function aplicarEscala() {
+  document.documentElement.style.setProperty('--escala', escala);
+  localStorage.setItem("escala", escala);
+}
+
+// ===== CONTRASTE =====
 function toggleContraste() {
   document.body.classList.toggle("contraste");
+
+  if (document.body.classList.contains("contraste")) {
+    localStorage.setItem("contraste", "on");
+  } else {
+    localStorage.setItem("contraste", "off");
+  }
 }
+
+// CARREGA CONTRASTE SALVO
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("contraste") === "on") {
+    document.body.classList.add("contraste");
+  }
+});
+
+// ===== TECLADO =====
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key === "+") aumentarFonte();
+  if (e.ctrlKey && e.key === "-") diminuirFonte();
+  if (e.ctrlKey && e.key === "0") resetarFonte();
+});
 
 // FEEDBACK
 
