@@ -21,15 +21,27 @@
     <div class="logo">
     <img src="img/logo.png" alt="Ecoviwer">
     </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
     <nav class="nav">
       <a href="#sobre">Sobre</a>
       <a href="#">Contate-nos</a>
           <button class="login-btn" onclick="abrirLogin()">
-          Login
+            Login
           </button>
      
     </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
+  <div class="menu-overlay" onclick="toggleMenu()"></div>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -39,13 +51,13 @@
       <div class="title">
         Explore as plantas
       </div>
-     <p class="subtitle">
-      Descubra informações detalhadas sobre milhares de espécies de plantas.
-      </p>
-     <a href="saiba-mais.html">
-      <button class="btn">
-        Saiba mais
-      </button>
+        <p class="subtitle">
+          Descubra informações detalhadas sobre milhares de espécies de plantas.
+        </p>
+      <a href="saiba-mais.html">
+        <button class="btn">
+          Saiba mais
+        </button>
       </a>
     </div>
 
@@ -67,9 +79,9 @@
 
     <div class="sobre-container">
 
-    <h2 class="sobre-title">Sobre nossa equipe</h2>
+      <h2 class="sobre-title">Sobre nossa equipe</h2>
 
-    <p class="sobre-text">
+       <p class="sobre-text">
       Este projeto foi desenvolvido como parte de uma iniciativa acadêmica no primeiro semestre do curso de 
       Ciência da Computação da Universidade Paulista. Ele representa não apenas a aplicação prática dos conhecimentos
       adquiridos em sala de aula, mas também o início da nossa jornada no desenvolvimento de
@@ -92,42 +104,42 @@
       Mesmo estando no início da graduação, este trabalho demonstra nosso comprometimento com o aprendizado, nossa capacidade de 
       trabalho em equipe e nossa vontade de evoluir constantemente na área da tecnologia. Este projeto é apenas o primeiro de muitos
       que ainda virão ao longo da nossa formação.
-    </p>
+      </p>
 
-    <div class="equipe">
+      <div class="equipe">
 
-      <div class="membro">
+        <div class="membro">
       
-        <h3>Vinícius | Gabriel</h3>
-        <span>Front-end</span>
-      </div>
+          <h3>Vinícius | Gabriel</h3>
+          <span>Front-end</span>
+        </div>
 
-      <div class="membro">
+        <div class="membro">
        
-        <h3>Yan | Jonathan</h3>
-        <span>Back-end</span>
-      </div>
+          <h3>Yan | Jonathan</h3>
+          <span>Back-end</span>
+        </div>
 
-      <div class="membro">
+        <div class="membro">
       
-        <h3>Marcio | Caio</h3>
-        <span>Design</span>
-      </div>
+          <h3>Marcio | Caio</h3>
+          <span>Design</span>
+        </div>
 
-       <div class="membro">
+        <div class="membro">
        
-        <h3>Bruno | Rafael</h3>
-        <span>Documentação</span>
+          <h3>Bruno | Rafael</h3>
+          <span>Documentação</span>
+        </div>
+
       </div>
 
     </div>
 
-  </div>
-
   </section>
 
   <footer class="footer">
-  <p>© 2026 Ecoviwer. Todos os direitos reservados.</p>
+    <p>© 2026 Ecoviwer. Todos os direitos reservados.</p>
   </footer>
 
 </div>
