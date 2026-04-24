@@ -64,3 +64,53 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarData();
 
 });
+
+ // ===== MODAL LOGIN =====
+
+function abrirLogin() {
+  document.getElementById("loginModal").classList.add("active");
+}
+
+function fecharLogin() {
+  document.getElementById("loginModal").classList.remove("active");
+}
+// ABRIR/FECHAR PAINEL
+function toggleAcessibilidade() {
+  const panel = document.getElementById("acessibilidadePanel");
+
+  if (panel.style.display === "flex") {
+    panel.style.display = "none";
+  } else {
+    panel.style.display = "flex";
+  }
+}
+
+// AUMENTAR FONTE
+let escala = 1;
+
+function aumentarFonte() {
+  escala += 0.1;
+  document.documentElement.style.setProperty('--escala', escala);
+}
+
+function diminuirFonte() {
+  if (escala > 0.7) {
+    escala -= 0.1;
+    document.documentElement.style.setProperty('--escala', escala);
+  }
+}
+
+// CONTRASTE
+function toggleContraste() {
+  document.body.classList.toggle("contraste");
+}
+
+// FEEDBACK
+
+function abrirFeedback() {
+  document.getElementById("feedbackModal").classList.add("active");
+}
+
+function fecharFeedback() {
+  document.getElementById("feedbackModal").classList.remove("active");
+}
