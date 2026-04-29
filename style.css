@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +11,13 @@ body {
   overflow-x: hidden;
 }
 
-/* OVERLAY */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
   z-index: -1;
 }
 
-/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -32,14 +28,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  transform: translateY(0); /* visível */
+  transform: translateY(0);
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-
   z-index: 1000;
 }
 
-/* 👇 ESSA É A CLASSE DO SEU JS */
 header.hide {
   transform: translateY(-100%); 
 }
@@ -48,7 +41,6 @@ header.hide {
   height: 70px;
 }
 
-/* NAV */
 .nav {
   display: flex;
   align-items: center;
@@ -77,7 +69,6 @@ header.hide {
   width: 100%;
 }
 
-/* LOGIN */
 .login-btn {
   background: #3e5f56;
   color: white;
@@ -92,11 +83,9 @@ header.hide {
   background: #2f4f4f;
 }
 
-/* HERO */
 .hero {
   position: relative;
   z-index: 2;
-
   height: calc(100vh - 80px); 
   display: flex;
   align-items: center;
@@ -104,6 +93,7 @@ header.hide {
   padding: 0 80px;
   background: url("img/plano-de-fundo.jpeg") no-repeat center/cover;
 }
+
 .hero::after {
   content: "";
   position: absolute;
@@ -121,26 +111,20 @@ header.hide {
   z-index: 2;
 }
 
-/* LADO ESQUERDO */
 .left {
   position: relative;
   max-width: 500px;
 }
 
-/* FAIXA "EXPLORE" */
 .title {
   position: relative;
   background: rgba(0, 0, 0, 0.65);
   color: white;
-
   padding: 14px 40px;
   font-size: 30px;
   font-weight: 500;
-
-  /* efeito lateral correto */
   margin-left: -120px;
   padding-left: 120px;
-
   border-radius: 0;
   backdrop-filter: blur(4px);
   margin-bottom: 30px;
@@ -156,7 +140,6 @@ header.hide {
   background: #3e5f56;
 }
 
-/* BOTÃO */
 .btn {
   background: #3e5f56;
   color: white;
@@ -175,19 +158,16 @@ header.hide {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* LADO DIREITO */
 .right {
   text-align: right;
   color: #333;
 }
 
-/* RELÓGIO */
 .time {
   font-size: 64px;
   font-weight: 600;
 }
 
-/* ESTAÇÃO */
 .season {
   font-size: 26px;
   margin-top: 8px;
@@ -203,7 +183,6 @@ header.hide {
   margin-left: auto;
 }
 
-/* DOTS */
 .dots {
   margin-top: 12px;
 }
@@ -222,7 +201,6 @@ header.hide {
   opacity: 1;
 }
 
-/* SOBRE */
 .sobre-container {
   position: relative;
   z-index: 2;
@@ -257,23 +235,20 @@ header.hide {
   background: rgba(255, 255, 255, 0.98);
   padding: 30px;
   border-radius: 12px;
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* TEXTO */
 .card p {
   color: #1a1a1a;
   line-height: 1.7;
   font-size: 16.5px;
 }
 
-/* TÍTULO */
 .card h2 {
   color: #2f4f4f;
   margin-bottom: 12px;
 }
-/* Data */
+
 .date {
   margin-top: 10px;
   font-size: 28px;
@@ -287,21 +262,16 @@ header.hide {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
   max-width: 420px;
-
   font-weight: 400; 
   letter-spacing: 0.5px; 
-
   backdrop-filter: (2px); 
 }
 
-/* SOBRE */
 .sobre {
   padding: 120px 60px;
-
   background: #f6fff8; 
   position: relative;
   z-index: 2;
-
   border-top-left-radius: 60px;   
   border-top-right-radius: 60px; 
   margin-top: 0px;
@@ -322,14 +292,12 @@ header.hide {
   font-size: 1.05rem;
 }
 
-/* GRID MAIS BONITO */
 .equipe {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
 }
 
-/* CARD DOS MEMBROS */
 .membro {
   text-align: center;
   padding: 20px;
@@ -339,13 +307,11 @@ header.hide {
   transition: 0.3s;
 }
 
-/* HOVER PREMIUM */
 .membro:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* IMAGEM */
 .membro img {
   width: 120px;
   height: 120px;
@@ -355,7 +321,6 @@ header.hide {
   transition: 0.3s;
 }
 
-/* ZOOM SUAVE */
 .membro:hover img {
   transform: scale(1.05);
 }
@@ -373,7 +338,7 @@ html {
   scroll-behavior: smooth;
     font-size: calc(16px * var(--escala));
 }
-/* FOOTER */
+
 .footer {
   text-align: center;
   padding: 20px;
@@ -382,7 +347,6 @@ html {
   color: #161212;
 }
 
-/* CAIXA */
 .login-box {
   position: relative;
   background: white;
@@ -390,12 +354,10 @@ html {
   border-radius: 20px;
   width: 100%;
   max-width: 400px;
-
   box-shadow: 0 20px 50px rgba(0,0,0,0.3);
   animation: subir 0.3s ease;
 }
 
-/* ANIMAÇÃO */
 @keyframes subir {
   from {
     transform: translateY(30px);
@@ -407,7 +369,6 @@ html {
   }
 }
 
-/* BOTÃO FECHAR */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -417,24 +378,20 @@ html {
   color: #333;
 }
 
-/* INPUT */
 .input-group {
   margin-bottom: 15px;
 }
-/* ===== MODAL PREMIUM ===== */
+
 .login-modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-
   z-index: 9999;
 }
 
@@ -443,26 +400,20 @@ html {
   pointer-events: all;
 }
 
-/* CAIXA */
 .login-box {
   position: relative;
   width: 100%;
   max-width: 420px;
-
   padding: 45px;
   border-radius: 20px;
-
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
-
   box-shadow: 
     0 20px 60px rgba(0,0,0,0.3),
     0 0 0 1px rgba(255,255,255,0.2);
-
   animation: fadeUp 0.4s ease;
 }
 
-/* ANIMAÇÃO */
 @keyframes fadeUp {
   from {
     transform: translateY(40px);
@@ -474,7 +425,6 @@ html {
   }
 }
 
-/* TÍTULO */
 .login-title {
   text-align: center;
   margin-bottom: 5px;
@@ -501,7 +451,6 @@ html {
   border-radius: 10px;
   border: 1px solid #ddd;
   outline: none;
-
   transition: 0.3s;
 }
 
@@ -510,7 +459,6 @@ html {
   box-shadow: 0 0 0 2px rgba(62,95,86,0.2);
 }
 
-/* LINKS */
 .login-links {
   text-align: right;
   margin-bottom: 15px;
@@ -526,13 +474,11 @@ html {
   text-decoration: underline;
 }
 
-/* BOTÃO */
 .login-submit {
   width: 100%;
   margin-top: 10px;
 }
 
-/* DIVISOR */
 .divider {
   text-align: center;
   margin: 25px 0;
@@ -557,7 +503,6 @@ html {
   z-index: -1;
 }
 
-/* BOTÃO OUTLINE */
 .btn-outline {
   width: 100%;
   padding: 12px;
@@ -574,29 +519,22 @@ html {
   color: white;
 }
 
-/* ===== BOTÃO ACESSIBILIDADE ===== */
 .acessibilidade-btn {
   position: fixed;
   right: 20px;
   bottom: 20px;
-
   width: 55px;
   height: 55px;
   border-radius: 50%;
-
   background: #3e5f56;
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 22px;
   cursor: pointer;
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   z-index: 9999;
-
   transition: 0.3s;
 }
 
@@ -605,25 +543,19 @@ html {
   background: #2f4f4f;
 }
 
-/* ===== PAINEL ===== */
 .acessibilidade-panel {
   position: fixed;
   right: 20px;
   bottom: 90px;
-
   width: 220px;
   padding: 20px;
-
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
-
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
   display: none;
   flex-direction: column;
   gap: 10px;
-
   z-index: 9999;
 }
 
@@ -632,16 +564,13 @@ html {
   color: #2f4f4f;
 }
 
-/* BOTÕES */
 .acessibilidade-panel button {
   padding: 10px;
   border: none;
   border-radius: 8px;
-
   background: #3e5f56;
   color: white;
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -649,37 +578,26 @@ html {
   background: #2f4f4f;
 }
 
-/* ESCALA GLOBAL */
 :root {
   --escala: 1;
 }
 
-/* FEEDBACK */
-
-/* BOTÃO FEEDBACK */
 .feedback-btn {
   position: fixed;
   right: 20px;
-
-  bottom: 95px; /* 👈 aqui é o segredo */
-
+  bottom: 95px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
-
   background: #3e5f56;
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 22px;
   cursor: pointer;
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   z-index: 10000;
-
   transition: 0.3s;
 }
 
@@ -688,20 +606,16 @@ html {
   background: #2f4f4f;
 }
 
-/* MODAL */
 .feedback-modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-
   z-index: 9999;
 }
 
@@ -710,41 +624,31 @@ html {
   pointer-events: all;
 }
 
-/* CAIXA */
 .feedback-box {
   width: 100%;
   max-width: 420px;
-
   padding: 45px;
   border-radius: 20px;
-
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(12px);
-
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-
   animation: fadeUp 0.4s ease;
 }
 
-/* TEXTAREA */
 .feedback-box textarea {
   width: 100%;
   height: 120px;
   padding: 12px;
-
   border-radius: 10px;
   border: 1px solid #ddd;
   resize: none;
-
   outline: none;
 }
 
-/* ESCONDE hamburguer NO DESKTOP */
 .menu-toggle {
   display: none;
 }
 
-/* ===== MODO ALTO CONTRASTE ACESSIVEL ===== */
 body.contraste {
   background: #000 !important;
   color: #fff !important;
@@ -756,27 +660,21 @@ body.contraste * {
   border-color: #fff !important;
 }
 
-/* LINKS */
 body.contraste a {
   color: #00ffff !important;
 }
 
-/* BOTÕES */
 body.contraste button {
   background: #fff !important;
   color: #000 !important;
 }
 
-
-/* ===== RESPONSIVO CELULAR (CORRIGIDO) ===== */
 @media (max-width: 768px) {
 
-  /* HEADER */
   header {
     padding: 15px 20px;
   }
 
-  /* BOTÃO HAMBURGER */
   .menu-toggle {
     display: block;
     font-size: 26px;
@@ -784,7 +682,6 @@ body.contraste button {
     z-index: 10001;
   }
 
-  /* MENU */
   .nav {
     position: fixed;
     top: 0;
@@ -815,7 +712,6 @@ body.contraste button {
     font-size: 18px;
   }
 
-  /* HERO */
   .hero {
     flex-direction: column;
     justify-content: center;
@@ -844,7 +740,6 @@ body.contraste button {
     margin-top: 20px;
   }
 
-  /* RELÓGIO */
   .right {
     margin-top: 40px;
     text-align: center;
@@ -862,7 +757,6 @@ body.contraste button {
     font-size: 20px;
   }
 
-  /* SOBRE */
   .sobre {
     padding: 80px 20px;
   }
@@ -876,12 +770,10 @@ body.contraste button {
     font-size: 0.95rem;
   }
 
-  /* GRID */
   .equipe {
     grid-template-columns: 1fr;
   }
 
-  /* BOTÕES */
   .feedback-btn {
     right: 15px;
     bottom: 90px;
