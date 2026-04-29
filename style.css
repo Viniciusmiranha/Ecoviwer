@@ -382,30 +382,6 @@ html {
   color: #161212;
 }
 
-
-/* ===== MODAL LOGIN ===== */
-.login-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s;
-
-  z-index: 9999;
-}
-
-/* QUANDO ABRE */
-.login-modal.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 /* CAIXA */
 .login-box {
   position: relative;
@@ -438,18 +414,12 @@ html {
   right: 20px;
   font-size: 26px;
   cursor: pointer;
+  color: #333;
 }
 
 /* INPUT */
 .input-group {
   margin-bottom: 15px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
 }
 /* ===== MODAL PREMIUM ===== */
 .login-modal {
@@ -504,16 +474,6 @@ html {
   }
 }
 
-/* FECHAR */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 26px;
-  cursor: pointer;
-  color: #333;
-}
-
 /* TÍTULO */
 .login-title {
   text-align: center;
@@ -526,11 +486,6 @@ html {
   margin-bottom: 25px;
   font-size: 14px;
   color: #666;
-}
-
-/* INPUT */
-.input-group {
-  margin-bottom: 18px;
 }
 
 .input-group label {
@@ -695,10 +650,6 @@ html {
 }
 
 /* ESCALA GLOBAL */
-:root {
-  --escala: 1;
-}
-
 :root {
   --escala: 1;
 }
