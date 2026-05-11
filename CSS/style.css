@@ -86,7 +86,7 @@ header.hide {
   align-items: center;
   justify-content: space-between;
   padding: 0 80px;
-  background: url("/img/plano-de-fundo.jpeg") no-repeat center/cover;
+  background: url("../img/plano-de-fundo.jpeg") no-repeat center/cover;
 }
 
 .hero::after {
