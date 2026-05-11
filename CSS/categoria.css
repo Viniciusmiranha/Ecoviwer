@@ -1,0 +1,409 @@
+  /* =========================================================
+    RESET
+  ========================================================= */
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  /* =========================================================
+    VARIÁVEIS
+  ========================================================= */
+
+  :root{
+
+    /* CORES */
+    --primary:#304d43;
+    --primary-light:#4f6d61;
+
+    --text:#222222;
+    --text-soft:#555555;
+
+    --white:#ffffff;
+
+    --card-bg:rgba(255,255,255,0.94);
+
+    --dot:#d7d7d7;
+
+    /* SOMBRAS */
+    --shadow:
+    0 10px 30px rgba(0,0,0,0.10);
+
+    --shadow-hover:
+    0 18px 40px rgba(0,0,0,0.16);
+
+    /* TAMANHOS */
+  --card-width:300px;
+  --card-height:355px;
+
+  --image-height:190px;
+
+    --radius:30px;
+  }
+
+  /* =========================================================
+    BODY
+  ========================================================= */
+
+  html,
+  body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Segoe UI", sans-serif;
+  }
+
+  /* =========================================================
+    BACKGROUND
+  ========================================================= */
+
+  .background{
+    position:fixed;
+    inset:0;
+
+    background:
+    url("/img/background-categorias.jpeg")
+    no-repeat center center;
+
+    background-size:cover;
+
+    z-index:-5;
+  }
+
+  /* =========================================================
+    DECORAÇÕES
+  ========================================================= */
+
+  .decor{
+    position:fixed;
+    z-index:-2;
+    opacity:0.18;
+    pointer-events:none;
+  }
+
+  .decor-left{
+    left:0;
+    bottom:0;
+    width:240px;
+  }
+
+  .decor-right{
+    right:0;
+    top:0;
+    width:220px;
+  }
+
+  /* =========================================================
+    CONTAINER
+  ========================================================= */
+
+  .container{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:
+    28px
+    70px
+    20px;
+  }
+
+  /* =========================================================
+    HEADER
+  ========================================================= */
+
+  .header{
+    width:100%;
+  }
+
+  .logo{
+    height: 70px;
+  }
+
+  /* =========================================================
+    HERO
+  ========================================================= */
+
+  .hero{
+    margin-top:28px;
+  }
+
+  .title{
+    font-size:2.8rem;
+    font-weight:700;
+
+    color:var(--primary);
+
+    line-height:1.05;
+    letter-spacing:-1.5px;
+
+    margin-bottom:14px;
+  }
+
+  .subtitle{
+    width:520px;
+
+    font-size:1.02rem;
+    line-height:1.65;
+
+    color:var(--text);
+
+    font-weight:400;
+  }
+
+
+  /* =========================================================
+    CARDS
+  ========================================================= */
+
+  .cards-wrapper{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    gap:26px;
+
+    margin-top:12px;
+  }
+  .card{
+
+    width:var(--card-width);
+    height:var(--card-height);
+
+    background:var(--card-bg);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    position:relative;
+
+    box-shadow:var(--shadow);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+      display:flex;
+    flex-direction:column;
+  }
+
+  .card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+  }
+
+  /* =========================================================
+    IMAGEM
+  ========================================================= */
+
+  .card-image{
+    width:100%;
+    height:var(--image-height);
+
+    overflow:hidden;
+  }
+
+  .card-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .5s ease;
+  }
+
+  .card-content{
+    padding: 22px 22px 20px;
+  }
+
+  .card:hover img{
+    transform:scale(1.05);
+  }
+
+  /* =========================================================
+    CARD BODY
+  ========================================================= */
+
+  .card-body{
+    position:relative;
+
+    padding:
+    36px
+    18px
+    14px;
+  }
+
+  /* =========================================================
+    ÍCONE
+  ========================================================= */
+
+  .icon-circle{
+
+    position:absolute;
+
+    top:-34px;
+    left:22px;
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:#f7f7f7;
+
+    border:2px solid rgba(48,77,67,0.15);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.45rem;
+    line-height:1;
+
+    color:var(--primary);
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.10);
+  }
+
+  /* =========================================================
+    TEXTOS CARD
+  ========================================================= */
+
+  .card h2{
+
+    font-size:1.7rem;
+    line-height: 1.5;
+    font-weight:650;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+  }
+
+  .card p{
+    font-size:0.74rem;
+    line-height:1.4;
+
+    color:var(--text-soft);
+
+    margin-bottom:14px;
+  }
+
+  /* =========================================================
+    BOTÃO CARD
+  ========================================================= */
+
+  .card-button{
+
+    display:inline-flex;
+    align-items:center;
+
+    font-size:0.88rem;
+    font-weight:700;
+
+    color:#5c7b44;
+
+    margin-top:auto;
+
+    white-space:nowrap;
+
+    transition:.3s ease;
+  }
+
+  .card:hover .card-button{
+    transform:translateX(5px);
+  }
+
+  /* =========================================================
+    SETAS
+  ========================================================= */
+
+  .nav-arrow{
+
+    position:fixed;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+  height:58px;
+
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(48,77,67,0.90);
+
+    color:white;
+
+    font-size:1.8rem;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.3s ease;
+
+    backdrop-filter:blur(8px);
+  }
+
+  .nav-arrow:hover{
+    transform:
+    translateY(-50%)
+    scale(1.08);
+
+    background:var(--primary-light);
+  }
+
+  .arrow-left{
+    left:90px;
+  }
+
+  .arrow-right{
+    right:90px;
+  }
+
+  /* =========================================================
+    PAGINAÇÃO
+  ========================================================= */
+
+  .pagination{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:18px;
+  }
+
+  .dot{
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--dot);
+
+    transition:.3s ease;
+  }
+
+  .dot.active{
+    background:var(--primary);
+
+    transform:scale(1.15);
+  }
