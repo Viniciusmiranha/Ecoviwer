@@ -166,4 +166,6 @@ function toggleMenu() {
   nav.classList.toggle("active");
   toggle.classList.toggle("active");
   overlay.classList.toggle("active");
+
+  document.body.classList.toggle("menu-open");
 }
