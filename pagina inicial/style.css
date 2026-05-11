@@ -415,6 +415,136 @@ html {
   --escala: 1;
 }
 
+
+/* =========================================================
+   FEEDBACK COMPLETO
+========================================================= */
+
+.feedback-box{
+  position: relative;
+}
+
+/* BOTÃO FECHAR */
+
+.close-btn{
+  position:absolute;
+  top:16px;
+  right:20px;
+
+  font-size:32px;
+  color:#555;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.close-btn:hover{
+  color:#000;
+  transform:scale(1.1);
+}
+
+/* TÍTULOS */
+
+.login-title{
+  font-size:2rem;
+  color:#2f4f4f;
+
+  margin-bottom:8px;
+
+  text-align:center;
+}
+
+.login-subtitle{
+  text-align:center;
+
+  color:#666;
+
+  margin-bottom:28px;
+
+  font-size:0.95rem;
+}
+
+/* INPUTS */
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+
+  margin-bottom:18px;
+}
+
+.input-group label{
+  margin-bottom:8px;
+
+  font-size:0.92rem;
+  font-weight:600;
+
+  color:#2f4f4f;
+}
+
+.input-group input,
+.input-group textarea{
+  width:100%;
+
+  border:none;
+  outline:none;
+
+  background:#f4f4f4;
+
+  border-radius:12px;
+
+  padding:14px 16px;
+
+  font-size:0.95rem;
+
+  transition:.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+  background:#ececec;
+
+  box-shadow:
+  0 0 0 2px rgba(62,95,86,0.18);
+}
+
+.input-group textarea{
+  min-height:130px;
+  resize:none;
+}
+
+/* BOTÃO ENVIAR */
+
+.login-submit{
+  width:100%;
+
+  margin-top:10px;
+
+  background:#3e5f56;
+  color:white;
+
+  border:none;
+
+  padding:14px;
+
+  border-radius:14px;
+
+  font-size:1rem;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.login-submit:hover{
+  background:#2f4f4f;
+
+  transform:translateY(-2px);
+}
+
+
 .feedback-btn {
   position: fixed;
   right: 20px;
@@ -501,6 +631,29 @@ body.contraste button {
   background: #fff !important;
   color: #000 !important;
 }
+
+/* OVERLAY MENU MOBILE */
+
+.menu-overlay{
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s;
+
+  z-index: 9998;
+}
+
+.menu-overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -615,5 +768,14 @@ body.contraste button {
   .acessibilidade-btn {
     right: 15px;
     bottom: 20px;
+  }
+
+  .feedback-box {
+    width: 92%;
+    padding: 30px 22px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
   }
 }
