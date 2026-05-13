@@ -88,7 +88,7 @@ function renderizarCards() {
 
     cardsWrapper.innerHTML += `
 
-      <a href="saiba-mais.html" class="card">
+      <a href="../saiba-mais.html" class="card">
 
         <div class="card-image">
           <img src="${card.imagem}" alt="${card.titulo}">
