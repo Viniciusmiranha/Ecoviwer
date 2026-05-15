@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Ecoviwer</title>
+  <link rel="stylesheet" href="CSS/admin-feedbacks.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section id="adminLogin" class="login-panel" aria-labelledby="adminTitle">
+      <img src="img/logo.png" alt="Ecoviwer" class="admin-logo">
+      <h1 id="adminTitle">Acesso restrito</h1>
+
+      <form id="adminLoginForm" class="admin-form">
+        <label for="adminName">Nome</label>
+        <input id="adminName" name="adminName" type="text" autocomplete="name" required>
+
+        <label for="adminPassword">Senha</label>
+        <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required>
+
+        <p id="adminLoginMessage" class="form-message" aria-live="polite"></p>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="feedbackPanel" class="feedback-panel" hidden>
+      <header class="panel-header">
+        <div>
+          <span class="eyebrow">Painel restrito</span>
+          <h1>Feedbacks recebidos</h1>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" class="secondary-button">Voltar ao inicio</a>
+          <button id="adminLogout" type="button" class="secondary-button">Sair</button>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <p id="feedbackCount">Carregando feedbacks...</p>
+        <button id="refreshFeedbacks" type="button">Atualizar</button>
+      </div>
+
+      <p id="feedbackListMessage" class="list-message" aria-live="polite"></p>
+      <div id="feedbackList" class="feedback-list"></div>
+    </section>
+  </main>
+
+  <script src="JS/api.js"></script>
+  <script src="JS/admin-feedbacks.js"></script>
+</body>
+</html>

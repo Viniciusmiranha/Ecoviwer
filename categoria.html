@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Categorias | Ecoviwer</title>
+
+  <link rel="stylesheet" href="CSS/categoria.css">
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="background"></div>
+
+  <!-- SETA ESQUERDA -->
+  <button class="nav-arrow arrow-left">
+    &#10094;
+  </button>
+
+  <!-- SETA DIREITA -->
+  <button class="nav-arrow arrow-right">
+    &#10095;
+  </button>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+
+    <!-- LOGO -->
+    <header class="header">
+      <a href="index.html">
+        <img src="img/logo.png" alt="Ecoviwer" class="logo">
+      </a>
+    </header>
+
+    <!-- TEXTOS -->
+    <section class="hero">
+
+      <h1 class="title">
+        Tipos de Plantas
+      </h1>
+
+      <p class="subtitle">
+        Selecione o tipo de planta que deseja explorar
+        e descubra informações detalhadas sobre
+        suas características e benefícios.
+      </p>
+
+      <form class="search-form" role="search">
+        <label class="search-label" for="familySearch">Pesquisar familias</label>
+        <input class="search-input" id="familySearch" type="search"
+          placeholder="Pesquisar por nome popular ou familia cientifica" autocomplete="off">
+        <div class="search-suggestions" id="searchSuggestions" aria-live="polite"></div>
+      </form>
+
+    </section>
+
+    <!-- CARDS -->
+    <section class="cards-wrapper" id="cardsWrapper"></section>
+
+    <!-- BOLINHAS -->
+    <div class="pagination" id="pagination"></div>
+
+  </main>
+
+  <script src="JS/api.js"></script>
+  <script src="JS/categoria.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="family-page-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Familia | Ecoviwer</title>
+
+  <link rel="stylesheet" href="CSS/categoria.css">
+</head>
+
+<body class="family-page-body">
+
+  <div class="background"></div>
+
+  <main class="family-page">
+    <header class="family-header">
+      <a href="categoria.html" class="family-back-link">Voltar</a>
+      <img src="img/logo.png" alt="Ecoviwer" class="logo">
+    </header>
+
+    <section class="family-heading">
+      <h1 id="family-title">Plantas da familia</h1>
+      <p id="family-summary" class="family-summary"></p>
+    </section>
+
+    <p id="family-loading" class="family-status">Carregando plantas...</p>
+    <p id="family-error" class="family-status family-error" hidden></p>
+
+    <section id="plants-grid" class="plants-grid"></section>
+
+    <div class="family-pagination" id="family-pagination">
+      <button id="previous-page" type="button">Anterior</button>
+      <span id="page-info">Pagina 1 de 1</span>
+      <button id="next-page" type="button">Proxima</button>
+    </div>
+  </main>
+
+  <script src="JS/api.js"></script>
+  <script src="JS/familia.js"></script>
+</body>
+</html>

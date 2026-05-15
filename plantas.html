@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>EcoViwer | Plantas</title>
+  <link rel="stylesheet" href="CSS/plantas.css">
+</head>
+
+<body>
+  <main class="app">
+    <aside class="sidebar">
+      <a href="categoria.html" class="logo-link" aria-label="Voltar para categorias">
+        <img src="img/logo.png" alt="EcoViwer" class="logo-image">
+      </a>
+
+      <section class="menu-box">
+        <h2 class="menu-title" id="familyTitle">Plantas</h2>
+        <p class="sidebar-status" id="plantsCount"></p>
+        <p class="sidebar-status" id="plantsLoading">Carregando plantas...</p>
+        <p class="sidebar-status sidebar-error" id="plantsError" hidden></p>
+
+        <ul class="plants-list" id="plantsList"></ul>
+      </section>
+    </aside>
+
+    <section class="content">
+      <article class="content-card">
+        <div class="image-box" id="plantImageBox">
+          <div class="plant-image-placeholder">Selecione uma planta</div>
+        </div>
+
+        <section class="plant-info">
+          <div>
+            <h1 class="plant-title" id="plantTitle">Plantas da família</h1>
+            <p class="scientific-name" id="scientificName"></p>
+            <p class="family-name" id="plantFamily"></p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div>
+            <h2 class="description-title">Descrição</h2>
+            <p class="description-text" id="plantDescription">
+              Escolha uma planta na lista para ver suas informacoes.
+            </p>
+          </div>
+
+          <div class="plant-details" id="plantDetails" hidden></div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <script src="JS/api.js"></script>
+  <script src="JS/plantas.js"></script>
+</body>
+</html>
